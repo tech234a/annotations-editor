@@ -283,6 +283,10 @@ DONE
 
     document.getElementById("gtp").addEventListener("input", event => {
         console.log(event.value);
+        proctype();
+       });     
+
+       function proctype() {
         if (document.getElementById("gtp").value == "speech") {
             document.getElementById("sx").setAttribute("type", "range");
             document.getElementById("sy").setAttribute("type", "range");
@@ -302,7 +306,9 @@ DONE
         };
 
         handleinput("");
-    });
+       };
+
+
 
 
     document.getElementById("cd").addEventListener("click", event => {
@@ -452,6 +458,8 @@ DONE
                 document.getElementById("gtp").value = "spotlight";
             };
         };
+
+        proctype();
 
     };
 
