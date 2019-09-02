@@ -394,7 +394,9 @@ DONE
             document.getElementById("an").removeChild(document.getElementById("an").firstChild);
         };
         anlist = document.getElementById("cd").value.split(";").filter(String);
-
+        if (anlist["length"] == 0) {
+            makenew();
+        };
 
 
 
