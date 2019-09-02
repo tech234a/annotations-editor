@@ -295,7 +295,12 @@ DONE
             document.getElementById("lsy").style.display = "none";
         }
         document.getElementById("tp").value = artypes[document.getElementById("gtp").value];
-        document.getElementById("s").value = arstyles[document.getElementById("gtp").value][0];
+        if (arstyles[document.getElementById("gtp").value][0]) {
+            document.getElementById("s").value = arstyles[document.getElementById("gtp").value][0];
+        }
+        else {
+            document.getElementById("s").value = "";
+        };
 
         handleinput("");
     });
