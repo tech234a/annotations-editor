@@ -297,8 +297,7 @@ DONE
         document.getElementById("tp").value = artypes[document.getElementById("gtp").value];
         if (arstyles[document.getElementById("gtp").value][0]) {
             document.getElementById("s").value = arstyles[document.getElementById("gtp").value][0];
-        }
-        else {
+        } else {
             document.getElementById("s").value = "";
         };
 
@@ -317,6 +316,9 @@ DONE
     document.getElementById("del").addEventListener("click", event => {
         if (confirm("Are you sure you want to delete this annotation?")) {
             anlist.splice(document.getElementById("an").value, 1);
+            if (anlist.length == 0) {
+                makenew();
+            };
             document.getElementById("cd").value = anlist.join(";");
             proccode("");
         };
